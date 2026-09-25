@@ -1,0 +1,47 @@
+# Woorden die NOOIT in de quiz mogen (Sranantongo + Nederlands). Eén per regel, kleine letters.
+# Het script controleert het antwoord, alle woorden in de puzzel, de hint en de betekenis.
+# Scheldwoorden / vloeken
+fok
+fuck
+kut
+lul
+klote
+kanker
+tering
+tyfus
+godverdomme
+hoer
+kankerhoer
+bitch
+mofo
+# Geslachtsdelen / seks
+pima
+pipi
+buta
+bobi
+penis
+vagina
+schede
+piemel
+kont
+anus
+borst
+borsten
+seks
+sex
+neuken
+naaien
+orgasme
+sperma
+# SOA / SOI
+soa
+soi
+std
+sti
+hiv
+aids
+syfilis
+gonorroe
+druiper
+herpes
+chlamydia
