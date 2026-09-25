@@ -1,16 +1,69 @@
 [
-  {"id": 1, "type": "piramide", "status": "klaar", "answer": "nati", "meaning": "nat",
-   "rows": ["a", "ai", "tin"], "row_meanings": ["de", "oog", "tien"],
-   "hint": "Zo word je als het regent en je geen paraplu hebt."},
-  {"id": 2, "type": "husselaar", "status": "klaar", "answer": "kunsu", "meaning": "kussen", "extra": "p",
-   "hint": "Je legt er ’s nachts je hoofd op."},
-  {"id": 3, "type": "cryptisch", "status": "klaar", "answer": "peipi", "meaning": "pijp",
-   "clue": "Holle staaf van klei of hout waar rook doorheen wordt gezogen.",
-   "extra_line": "Een holle staaf voor tabaksrook", "hint": "Het lijkt op het Nederlandse woord."},
-  {"id": 4, "type": "code", "status": "klaar", "answer": "tori", "meaning": "verhaal",
-   "hint": "Anansi is er de hoofdpersoon van."},
-  {"id": 5, "type": "klinkers", "status": "klaar", "answer": "merkitifi", "meaning": "melkgebit",
-   "hint": "Kinderen verliezen deze tanden rond hun zesde jaar."},
-  {"id": 6, "type": "tweewoorden", "status": "klaar", "answer": "pakusi", "meaning": "zoetwatervis",
-   "words": ["rivier", "schub"], "hint": "Het is een vis die in de rivier leeft."}
+ {
+  "id": 1,
+  "type": "piramide",
+  "status": "wacht op goedkeuring",
+  "answer": "nati",
+  "meaning": "nat",
+  "rows": [
+   "a",
+   "ai",
+   "tin"
+  ],
+  "row_meanings": [
+   "de",
+   "oog",
+   "tien"
+  ],
+  "hint": "Zo word je als het regent en je geen paraplu hebt.",
+  "made_on": "2026-09-25",
+  "video_url": "https://github.com/mbrewrites-prog/gbyke/releases/download/quiz-2026-09-25-1/GBYKE_2026-09-25_piramide_nati.mp4"
+ },
+ {
+  "id": 2,
+  "type": "husselaar",
+  "status": "klaar",
+  "answer": "kunsu",
+  "meaning": "kussen",
+  "extra": "p",
+  "hint": "Je legt er ’s nachts je hoofd op."
+ },
+ {
+  "id": 3,
+  "type": "cryptisch",
+  "status": "klaar",
+  "answer": "peipi",
+  "meaning": "pijp",
+  "clue": "Holle staaf van klei of hout waar rook doorheen wordt gezogen.",
+  "extra_line": "Een holle staaf voor tabaksrook",
+  "hint": "Het lijkt op het Nederlandse woord."
+ },
+ {
+  "id": 4,
+  "type": "code",
+  "status": "klaar",
+  "answer": "tori",
+  "meaning": "verhaal",
+  "hint": "Anansi is er de hoofdpersoon van."
+ },
+ {
+  "id": 5,
+  "type": "klinkers",
+  "status": "klaar",
+  "answer": "merkitifi",
+  "meaning": "melkgebit",
+  "hint": "Kinderen verliezen deze tanden rond hun zesde jaar."
+ },
+ {
+  "id": 6,
+  "type": "tweewoorden",
+  "status": "klaar",
+  "answer": "pakusi",
+  "meaning": "zoetwatervis",
+  "words": [
+   "rivier",
+   "schub"
+  ],
+  "hint": "Het is een vis die in de rivier leeft."
+ }
 ]
