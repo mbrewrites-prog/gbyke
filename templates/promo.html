@@ -1,0 +1,55 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:'Pop';src:url('node_modules/@fontsource/poppins/files/poppins-latin-800-normal.woff2') format('woff2');font-weight:800}
+@font-face{font-family:'Pop';src:url('node_modules/@fontsource/poppins/files/poppins-latin-700-normal.woff2') format('woff2');font-weight:700}
+html,body{margin:0;width:1080px;height:1920px;background:transparent;overflow:hidden;font-family:'Pop',sans-serif}
+#logo{position:absolute;left:50px;top:50px;width:150px}
+#game{position:absolute;left:0;right:0;top:78px;text-align:center}
+#game span{display:inline-block;font-weight:800;font-size:34px;letter-spacing:4px;padding:14px 34px 12px;border-radius:40px;background:rgba(255,255,255,.92);color:#3A1250;box-shadow:0 8px 26px rgba(0,0,0,.18)}
+.card{position:absolute;left:70px;right:70px;top:1190px;min-height:230px;border-radius:44px;background:rgba(255,255,255,.93);
+  box-shadow:0 16px 50px rgba(40,10,40,.30);display:flex;align-items:center;gap:34px;padding:34px 40px;box-sizing:border-box;opacity:0}
+.blk{flex:0 0 150px;height:150px;border-radius:22px;background:linear-gradient(160deg,#FFD84D 0%,#F7C21B 55%,#E0A800 100%);
+  box-shadow:inset 0 -10px 0 rgba(160,100,0,.35),inset 0 8px 0 rgba(255,245,190,.7),0 10px 20px rgba(120,70,0,.35);
+  display:flex;align-items:center;justify-content:center;font-weight:800;font-size:96px;color:#111}
+.txt h2{margin:0;font-weight:800;font-size:58px;line-height:1.08;color:#3A1250}
+.txt p{margin:12px 0 0;font-weight:700;font-size:36px;line-height:1.25;color:#6B3A7D}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.chips b{font-weight:700;font-size:26px;padding:8px 16px;border-radius:20px;background:#F7C21B;color:#111}
+#intro{flex-direction:column;align-items:center;text-align:center;gap:10px}
+#intro h2{font-size:64px}
+#cta{flex-direction:column;align-items:center;text-align:center;gap:18px;top:1120px}
+#cta .row{display:flex;gap:14px}
+#cta .row .blk{flex:0 0 118px;height:118px;font-size:74px}
+#cta h2{font-size:76px}
+</style></head>
+<body>
+<img id="logo" src="logo.png">
+<div id="game"><span>GEBROIKI YU KONI ESI</span></div>
+<div class="card" id="intro"><div class="txt"><h2>Speel mee en leer<br>Sranantongo!</h2><p>De dagelijkse quiz van Spang Torie Academy</p></div></div>
+<div class="card" id="c1"><div class="blk">1</div><div class="txt"><h2>Elke dag een nieuwe quiz</h2><p>met een nieuw Surinaams woord</p></div></div>
+<div class="card" id="c2"><div class="blk">2</div><div class="txt"><h2>6 verschillende spellen</h2>
+  <div class="chips"><b>Woordpiramide</b><b>Letterhusselaar</b><b>Code kraken</b><b>Klinkers</b><b>Cryptisch</b><b>Twee woorden</b></div></div></div>
+<div class="card" id="c3"><div class="blk">3</div><div class="txt"><h2>Leer wat elk woord betekent</h2><p>bijvoorbeeld: <b style="color:#3A1250">kunsu = kussen</b></p></div></div>
+<div class="card" id="c4"><div class="blk">★</div><div class="txt"><h2>Leuk én leerzaam</h2><p>Train je hersenen en leer elke dag iets nieuws</p></div></div>
+<div class="card" id="cta"><div class="row"><div class="blk">g</div><div class="blk">b</div><div class="blk">y</div><div class="blk">k</div><div class="blk">e</div></div>
+  <div class="txt"><h2>Volg @gbykequiz</h2><p>op Instagram en Facebook</p></div></div>
+<script>
+const $ = id => document.getElementById(id);
+const clamp = (x,a=0,b=1)=>Math.min(b,Math.max(a,x)), ease = x => 1-Math.pow(1-x,3);
+let P = { marks: [0, 5, 10, 15, 20, 25], duration: 30 };
+function show(el, t, a, b) {                  // slide up + fade in at a, out at b
+  const i = ease(clamp((t - a) / 0.45)), o = ease(clamp((t - (b - 0.35)) / 0.35));
+  const v = Math.min(i, 1 - o); el.style.opacity = v; el.style.transform = `translateY(${(1 - i) * 60 + o * -30}px) scale(${0.96 + 0.04 * i})`;
+}
+window.renderAt = t => {
+  const m = P.marks, end = P.duration + 10;
+  show($('intro'), t, m[0] + 0.2, m[1]); show($('c1'), t, m[1], m[2]); show($('c2'), t, m[2], m[3]);
+  show($('c3'), t, m[3], m[4]); show($('c4'), t, m[4], m[5]); show($('cta'), t, m[5], end);
+  // CTA letters pop one by one
+  [...document.querySelectorAll('#cta .row .blk')].forEach((b, k) => { const p = ease(clamp((t - m[5] - 0.2 - k * 0.12) / 0.35));
+    b.style.transform = `translateY(${(1 - p) * 40}px) rotate(${(1 - p) * -12}deg)`; b.style.opacity = p; });
+};
+window.ready = (async () => { try { P = await (await fetch('promo.json', { cache: 'no-store' })).json(); } catch (e) {}
+  await document.fonts.load("800 60px Pop"); await document.fonts.load("700 30px Pop"); window.DURATION = P.duration; return true; })();
+</script></body></html>
