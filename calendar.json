@@ -22,11 +22,13 @@
  {
   "id": 2,
   "type": "husselaar",
-  "status": "klaar",
+  "status": "wacht op goedkeuring",
   "answer": "kunsu",
   "meaning": "kussen",
   "extra": "p",
-  "hint": "Je legt er ’s nachts je hoofd op."
+  "hint": "Je legt er ’s nachts je hoofd op.",
+  "made_on": "2026-09-26",
+  "video_url": "https://github.com/mbrewrites-prog/gbyke/releases/download/quiz-2026-09-26-2/GBYKE_2026-09-26_husselaar_kunsu.mp4"
  },
  {
   "id": 3,
