@@ -33,12 +33,14 @@
  {
   "id": 3,
   "type": "cryptisch",
-  "status": "klaar",
+  "status": "wacht op goedkeuring",
   "answer": "peipi",
   "meaning": "pijp",
   "clue": "Holle staaf van klei of hout waar rook doorheen wordt gezogen.",
   "extra_line": "Een holle staaf voor tabaksrook",
-  "hint": "Het lijkt op het Nederlandse woord."
+  "hint": "Het lijkt op het Nederlandse woord.",
+  "made_on": "2026-09-27",
+  "video_url": "https://github.com/mbrewrites-prog/gbyke/releases/download/quiz-2026-09-27-3/GBYKE_2026-09-27_cryptisch_peipi.mp4"
  },
  {
   "id": 4,
