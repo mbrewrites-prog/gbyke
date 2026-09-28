@@ -45,10 +45,12 @@
  {
   "id": 4,
   "type": "code",
-  "status": "klaar",
+  "status": "wacht op goedkeuring",
   "answer": "tori",
   "meaning": "verhaal",
-  "hint": "Anansi is er de hoofdpersoon van."
+  "hint": "Anansi is er de hoofdpersoon van.",
+  "made_on": "2026-09-28",
+  "video_url": "https://github.com/mbrewrites-prog/gbyke/releases/download/quiz-2026-09-28-4/GBYKE_2026-09-28_code_tori.mp4"
  },
  {
   "id": 5,
