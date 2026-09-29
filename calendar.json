@@ -55,10 +55,12 @@
  {
   "id": 5,
   "type": "klinkers",
-  "status": "klaar",
+  "status": "wacht op goedkeuring",
   "answer": "merkitifi",
   "meaning": "melkgebit",
-  "hint": "Kinderen verliezen deze tanden rond hun zesde jaar."
+  "hint": "Kinderen verliezen deze tanden rond hun zesde jaar.",
+  "made_on": "2026-09-29",
+  "video_url": "https://github.com/mbrewrites-prog/gbyke/releases/download/quiz-2026-09-29-5/GBYKE_2026-09-29_klinkers_merkitifi.mp4"
  },
  {
   "id": 6,
