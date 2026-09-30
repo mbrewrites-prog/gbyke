@@ -65,13 +65,15 @@
  {
   "id": 6,
   "type": "tweewoorden",
-  "status": "klaar",
+  "status": "wacht op goedkeuring",
   "answer": "pakusi",
   "meaning": "zoetwatervis",
   "words": [
    "rivier",
    "schub"
   ],
-  "hint": "Het is een vis die in de rivier leeft."
+  "hint": "Het is een vis die in de rivier leeft.",
+  "made_on": "2026-09-30",
+  "video_url": "https://github.com/mbrewrites-prog/gbyke/releases/download/quiz-2026-09-30-6/GBYKE_2026-09-30_tweewoorden_pakusi.mp4"
  }
 ]
