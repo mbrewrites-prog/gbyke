@@ -78,7 +78,7 @@
  },
  {
   "id": 7,
-  "status": "wacht op goedkeuring",
+  "status": "gepost",
   "type": "piramide",
   "answer": "tafra",
   "meaning": "tafel",
@@ -105,7 +105,8 @@
   "answer": "fowru",
   "meaning": "vogel",
   "extra": "a",
-  "hint": "Hij heeft vleugels en zingt in de boom."
+  "hint": "Hij heeft vleugels en zingt in de boom.",
+  "cover_url": "https://drive.usercontent.google.com/download?id=1hF-e403f3vqLqmXTXgqASHuFsEpPkggf&export=download"
  },
  {
   "id": 9,
@@ -115,7 +116,8 @@
   "meaning": "water",
   "clue": "Het valt uit de lucht, stroomt in de rivier en lest je dorst.",
   "extra_line": "Het valt uit de lucht en lest je dorst",
-  "hint": "Zonder dit kun je niet leven."
+  "hint": "Zonder dit kun je niet leven.",
+  "cover_url": "https://drive.usercontent.google.com/download?id=1vnqc1bkMxBiB4dSeWEa8xUUaJAkrtErH&export=download"
  },
  {
   "id": 10,
@@ -123,7 +125,8 @@
   "type": "code",
   "answer": "dagu",
   "meaning": "hond",
-  "hint": "Hij blaft als er iemand aan de deur komt."
+  "hint": "Hij blaft als er iemand aan de deur komt.",
+  "cover_url": "https://drive.usercontent.google.com/download?id=1lfqOc-0uKVG01XidhDfMEO-564II7CrQ&export=download"
  },
  {
   "id": 11,
@@ -131,7 +134,8 @@
   "type": "klinkers",
   "answer": "sukru",
   "meaning": "suiker",
-  "hint": "Je doet het in je thee om hem zoet te maken."
+  "hint": "Je doet het in je thee om hem zoet te maken.",
+  "cover_url": "https://drive.usercontent.google.com/download?id=1FCZfGCtmasiIzfbUgjYWAicQniQOk8Q2&export=download"
  },
  {
   "id": 12,
@@ -143,7 +147,8 @@
    "oog",
    "vocht"
   ],
-  "hint": "Je laat ze als je verdrietig bent."
+  "hint": "Je laat ze als je verdrietig bent.",
+  "cover_url": "https://drive.usercontent.google.com/download?id=1yXDD0RF73nNe5mMB_YgMs6I8dVMn72gX&export=download"
  },
  {
   "id": 13,
@@ -165,7 +170,8 @@
    "deur",
    "onder"
   ],
-  "hint": "Suriname is er één van."
+  "hint": "Suriname is er één van.",
+  "cover_url": "https://drive.usercontent.google.com/download?id=1cE1CzrnMzBdxKgrhPFEqQVwyHvWjfSUT&export=download"
  },
  {
   "id": 14,
@@ -174,7 +180,8 @@
   "answer": "brede",
   "meaning": "brood",
   "extra": "o",
-  "hint": "Je smeert er boter op."
+  "hint": "Je smeert er boter op.",
+  "cover_url": "https://drive.usercontent.google.com/download?id=1HMVcKf_sAs1ZQHDZHZiaMb7qDX75F_nw&export=download"
  },
  {
   "id": 15,
