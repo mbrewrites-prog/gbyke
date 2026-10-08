@@ -50,9 +50,20 @@ def build(e):
         x = e['extra'].lower()
         if len(x) != 1 or len(A) > 7: raise ValueError('husselaar: precies 1 extra letter, antwoord max. 7 letters')
         letters = A + [x]; rnd = random.Random(w)
-        for _ in range(50):
+        pairs = {w[k:k + 2] for k in range(len(w) - 1)}          # letter pairs that occur in the word
+        def score(L):                                           # lower = better shuffled
+            s = ''.join(L)
+            same_pos = sum(1 for k in range(len(A)) if L[k] == A[k])       # letter still on its own place
+            kept = sum(1 for k in range(len(s) - 1) if s[k:k + 2] in pairs)  # neighbours that give the word away
+            extra_edge = 1 if L[-1] == x or L[0] == x else 0                  # extra letter not at the edges
+            return same_pos * 3 + kept * 3 + extra_edge
+        best = None
+        for _ in range(4000):
             rnd.shuffle(letters)
-            if ''.join(letters[:len(A)]) != w: break
+            sc = score(letters)
+            if best is None or sc < best[0]: best = (sc, letters[:])
+            if sc == 0: break
+        letters = best[1]
         cfg = {'title': 'Maak er een woord van', 'sub': 'Eén letter hoort er niet bij.', 'letters': letters,
                'answer': A, 'extra': letters.index(x), 'answerCard': card, 'meanings': f"De letter {x} hoort er niet bij"}
     elif t == 'code':
@@ -68,16 +79,21 @@ def build(e):
         if len(A) > 8: raise ValueError('cryptisch: max. 8 letters')
         cfg = dict(base, clue=e['clue'], answer=A, answerCard=card, meanings=e.get('extra_line', e['meaning']))
     elif t == 'tweewoorden':
-        if len(A) > 8: raise ValueError('tweewoorden: max. 8 letters')
+        if len(A) > 10: raise ValueError('tweewoorden: max. 10 letters')
         w1, w2 = e['words']
         cfg = dict(base, clue=f"{w1}&nbsp;&nbsp;+&nbsp;&nbsp;{w2}", answer=A, answerCard=card,
                    meanings=f"{w1} + {w2} → {e['meaning']}")
     cfg['hint'] = e['hint']
     return TYPES[t]['page'], cfg
 
+HASHTAGS = "#suriname #surinaams #quiz #game #spangtorie"      # FIXED – never change
+CAPTIONS = {
+  'piramide':    "Dit is voor onze snelle denkers. Weet jij welk woord onderaan de piramide hoort?",
+  'husselaar':   "Dit is voor onze snelle denkers. Welk woord zit er verstopt en welke letter hoort er niet bij?",
+  'cryptisch':   "Dit is voor onze slimme puzzelaars. Welk Surinaams woord wordt hier omschreven?",
+  'code':        "Dit is voor onze codekrakers. Weet jij welk woord er achter de cijfers zit?",
+  'klinkers':    "Dit is voor onze snelle denkers. Welke klinkers ontbreken er in dit woord?",
+  'tweewoorden': "Dit is voor onze snelle denkers. Welk Surinaams woord ontstaat er uit deze twee woorden?",
+}
 def caption(e):
-    name = GAME_NAME[e['type']]
-    return (f"🧩 {name} van de dag!\n\nWeet jij het antwoord? Speel mee en zet je antwoord in de reacties 👇\n"
-            f"Het antwoord zie je aan het einde van de video.\n\n"
-            f"Leer elke dag een nieuw Sranantongo-woord met Gebroiki Yu Koni Esi 🇸🇷\n\n"
-            f"#Sranantongo #Surinaams #GebroikiYuKoniEsi #SpangTorieAcademy #LeerSranantongo #Quiz #Taalquiz")
+    return (CAPTIONS[e['type']] + " Plaats het hier beneden in de comments of laat weten of je het goed had.\n\n" + HASHTAGS)
