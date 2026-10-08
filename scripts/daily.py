@@ -50,6 +50,8 @@ def main():
         if e['answer'].lower() in recent: print('SKIP (woord al gebruikt deze week):', e['answer']); continue
         try: page, cfg = rules.build(e); entry = e; break
         except ValueError as err: e['status'] = 'afgekeurd'; e['reason'] = str(err); print('REJECTED', e['id'], err)
+    if entry and not entry.get('cover_url'):
+        sys.exit(f"Quiz {entry['id']} ({entry['answer']}) heeft nog geen cover – vraag Claude de covers voor deze week te maken.")
     if not entry:
         json.dump(cal, open(cal_path, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
         sys.exit('Geen quiz met status "klaar" meer in calendar.json – vul de kalender aan.')
@@ -78,11 +80,12 @@ def main():
     sh('gh', 'release', 'create', tag, final, '--title', f"{today} – {entry['type']} – {entry['answer']}", '--notes', 'GBYKE daily quiz')
     url = f"https://github.com/{repo}/releases/download/{tag}/{name}"
     payload = {'brand_id': GBYKE_BRAND, 'video_url': url, 'file_name': name, 'caption': rules.caption(entry),
+               'cover_url': entry.get('cover_url', ''),
                'title': rules.GAME_NAME[entry['type']] + ' van de dag', 'publish_at': f"{today:%Y-%m-%d}T18:00:00", 'answer': entry['answer']}
     req = urllib.request.Request(os.environ['MAKE_WEBHOOK_URL'], data=json.dumps(payload).encode(), headers={'Content-Type': 'application/json'})
     print('Make:', urllib.request.urlopen(req, timeout=300).read().decode())
     # NOT posted yet: waits for approval in the Claude chat, then Claude schedules it for 18:00
-    entry['status'] = 'wacht op goedkeuring'; entry['made_on'] = str(today); entry['video_url'] = url
+    entry['status'] = 'gepost'; entry['made_on'] = str(today); entry['video_url'] = url
     json.dump(cal, open(cal_path, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 
 if __name__ == '__main__': main()
