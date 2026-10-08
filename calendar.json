@@ -2,7 +2,7 @@
  {
   "id": 1,
   "type": "piramide",
-  "status": "wacht op goedkeuring",
+  "status": "gepost",
   "answer": "nati",
   "meaning": "nat",
   "rows": [
@@ -22,7 +22,7 @@
  {
   "id": 2,
   "type": "husselaar",
-  "status": "wacht op goedkeuring",
+  "status": "gepost",
   "answer": "kunsu",
   "meaning": "kussen",
   "extra": "p",
@@ -33,7 +33,7 @@
  {
   "id": 3,
   "type": "cryptisch",
-  "status": "wacht op goedkeuring",
+  "status": "gepost",
   "answer": "peipi",
   "meaning": "pijp",
   "clue": "Holle staaf van klei of hout waar rook doorheen wordt gezogen.",
@@ -45,7 +45,7 @@
  {
   "id": 4,
   "type": "code",
-  "status": "wacht op goedkeuring",
+  "status": "gepost",
   "answer": "tori",
   "meaning": "verhaal",
   "hint": "Anansi is er de hoofdpersoon van.",
@@ -55,7 +55,7 @@
  {
   "id": 5,
   "type": "klinkers",
-  "status": "wacht op goedkeuring",
+  "status": "gepost",
   "answer": "merkitifi",
   "meaning": "melkgebit",
   "hint": "Kinderen verliezen deze tanden rond hun zesde jaar.",
@@ -65,7 +65,7 @@
  {
   "id": 6,
   "type": "tweewoorden",
-  "status": "wacht op goedkeuring",
+  "status": "gepost",
   "answer": "pakusi",
   "meaning": "zoetwatervis",
   "words": [
@@ -75,5 +75,141 @@
   "hint": "Het is een vis die in de rivier leeft.",
   "made_on": "2026-09-30",
   "video_url": "https://github.com/mbrewrites-prog/gbyke/releases/download/quiz-2026-09-30-6/GBYKE_2026-09-30_tweewoorden_pakusi.mp4"
+ },
+ {
+  "id": 7,
+  "status": "klaar",
+  "type": "piramide",
+  "answer": "tafra",
+  "meaning": "tafel",
+  "rows": [
+   "a",
+   "fa",
+   "tra",
+   "tata"
+  ],
+  "row_meanings": [
+   "de",
+   "hoe",
+   "ander",
+   "vader"
+  ],
+  "hint": "Je zet er je bord op als je gaat eten."
+ },
+ {
+  "id": 8,
+  "status": "klaar",
+  "type": "husselaar",
+  "answer": "fowru",
+  "meaning": "vogel",
+  "extra": "a",
+  "hint": "Hij heeft vleugels en zingt in de boom."
+ },
+ {
+  "id": 9,
+  "status": "klaar",
+  "type": "cryptisch",
+  "answer": "watra",
+  "meaning": "water",
+  "clue": "Het valt uit de lucht, stroomt in de rivier en lest je dorst.",
+  "extra_line": "Het valt uit de lucht en lest je dorst",
+  "hint": "Zonder dit kun je niet leven."
+ },
+ {
+  "id": 10,
+  "status": "klaar",
+  "type": "code",
+  "answer": "dagu",
+  "meaning": "hond",
+  "hint": "Hij blaft als er iemand aan de deur komt."
+ },
+ {
+  "id": 11,
+  "status": "klaar",
+  "type": "klinkers",
+  "answer": "sukru",
+  "meaning": "suiker",
+  "hint": "Je doet het in je thee om hem zoet te maken."
+ },
+ {
+  "id": 12,
+  "status": "klaar",
+  "type": "tweewoorden",
+  "answer": "aiwatra",
+  "meaning": "tranen",
+  "words": [
+   "oog",
+   "vocht"
+  ],
+  "hint": "Je laat ze als je verdrietig bent."
+ },
+ {
+  "id": 13,
+  "status": "klaar",
+  "type": "piramide",
+  "answer": "kondre",
+  "meaning": "land",
+  "rows": [
+   "e",
+   "no",
+   "kon",
+   "doro",
+   "ondro"
+  ],
+  "row_meanings": [
+   "(bezig met)",
+   "niet",
+   "komen",
+   "deur",
+   "onder"
+  ],
+  "hint": "Suriname is er één van."
+ },
+ {
+  "id": 14,
+  "status": "klaar",
+  "type": "husselaar",
+  "answer": "brede",
+  "meaning": "brood",
+  "extra": "o",
+  "hint": "Je smeert er boter op."
+ },
+ {
+  "id": 15,
+  "status": "klaar",
+  "type": "cryptisch",
+  "answer": "sribi",
+  "meaning": "slapen",
+  "clue": "Wat je elke nacht met je ogen dicht in bed doet.",
+  "extra_line": "Wat je elke nacht in bed doet",
+  "hint": "Daarna word je uitgerust wakker."
+ },
+ {
+  "id": 16,
+  "status": "klaar",
+  "type": "code",
+  "answer": "mun",
+  "meaning": "maan",
+  "hint": "Hij schijnt ’s nachts aan de hemel."
+ },
+ {
+  "id": 17,
+  "status": "klaar",
+  "type": "klinkers",
+  "answer": "anansi",
+  "meaning": "spin",
+  "hint": "Hij spint een web en is de held van veel verhalen."
+ },
+ {
+  "id": 18,
+  "status": "klaar",
+  "type": "tweewoorden",
+  "answer": "granpikin",
+  "meaning": "kleinkind",
+  "words": [
+   "groot",
+   "kind"
+  ],
+  "hint": "Opa en oma zijn er dol op."
  }
 ]
