@@ -78,7 +78,7 @@
  },
  {
   "id": 7,
-  "status": "klaar",
+  "status": "wacht op goedkeuring",
   "type": "piramide",
   "answer": "tafra",
   "meaning": "tafel",
@@ -94,7 +94,9 @@
    "ander",
    "vader"
   ],
-  "hint": "Je zet er je bord op als je gaat eten."
+  "hint": "Je zet er je bord op als je gaat eten.",
+  "made_on": "2026-10-08",
+  "video_url": "https://github.com/mbrewrites-prog/gbyke/releases/download/quiz-2026-10-08-7/GBYKE_2026-10-08_piramide_tafra.mp4"
  },
  {
   "id": 8,
