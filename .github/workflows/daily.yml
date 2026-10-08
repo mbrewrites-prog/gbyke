@@ -1,7 +1,7 @@
 name: GBYKE daily quiz
 on:
   schedule:
-    - cron: '30 6 * * *'      # 06:30 UTC = 07:30/08:30 NL – video is ready for approval in the morning, posted at 18:00 after approval
+    - cron: '0 1 * * *'      # 06:30 UTC = 07:30/08:30 NL – video is ready for approval in the morning, posted at 18:00 after approval
   workflow_dispatch: {}
 permissions:
   contents: write
