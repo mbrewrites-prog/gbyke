@@ -100,13 +100,15 @@
  },
  {
   "id": 8,
-  "status": "klaar",
+  "status": "gepost",
   "type": "husselaar",
   "answer": "fowru",
   "meaning": "vogel",
   "extra": "a",
   "hint": "Hij heeft vleugels en zingt in de boom.",
-  "cover_url": "https://drive.usercontent.google.com/download?id=1hF-e403f3vqLqmXTXgqASHuFsEpPkggf&export=download"
+  "cover_url": "https://drive.usercontent.google.com/download?id=1hF-e403f3vqLqmXTXgqASHuFsEpPkggf&export=download",
+  "made_on": "2026-10-09",
+  "video_url": "https://github.com/mbrewrites-prog/gbyke/releases/download/quiz-2026-10-09-8/GBYKE_2026-10-09_husselaar_fowru.mp4"
  },
  {
   "id": 9,
