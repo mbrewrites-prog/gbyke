@@ -112,14 +112,16 @@
  },
  {
   "id": 9,
-  "status": "klaar",
+  "status": "gepost",
   "type": "cryptisch",
   "answer": "watra",
   "meaning": "water",
   "clue": "Het valt uit de lucht, stroomt in de rivier en lest je dorst.",
   "extra_line": "Het valt uit de lucht en lest je dorst",
   "hint": "Zonder dit kun je niet leven.",
-  "cover_url": "https://drive.usercontent.google.com/download?id=1vnqc1bkMxBiB4dSeWEa8xUUaJAkrtErH&export=download"
+  "cover_url": "https://drive.usercontent.google.com/download?id=1vnqc1bkMxBiB4dSeWEa8xUUaJAkrtErH&export=download",
+  "made_on": "2026-10-10",
+  "video_url": "https://github.com/mbrewrites-prog/gbyke/releases/download/quiz-2026-10-10-9/GBYKE_2026-10-10_cryptisch_watra.mp4"
  },
  {
   "id": 10,
