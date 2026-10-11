@@ -125,12 +125,14 @@
  },
  {
   "id": 10,
-  "status": "klaar",
+  "status": "gepost",
   "type": "code",
   "answer": "dagu",
   "meaning": "hond",
   "hint": "Hij blaft als er iemand aan de deur komt.",
-  "cover_url": "https://drive.usercontent.google.com/download?id=1lfqOc-0uKVG01XidhDfMEO-564II7CrQ&export=download"
+  "cover_url": "https://drive.usercontent.google.com/download?id=1lfqOc-0uKVG01XidhDfMEO-564II7CrQ&export=download",
+  "made_on": "2026-10-11",
+  "video_url": "https://github.com/mbrewrites-prog/gbyke/releases/download/quiz-2026-10-11-10/GBYKE_2026-10-11_code_dagu.mp4"
  },
  {
   "id": 11,
