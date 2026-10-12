@@ -136,12 +136,14 @@
  },
  {
   "id": 11,
-  "status": "klaar",
+  "status": "gepost",
   "type": "klinkers",
   "answer": "sukru",
   "meaning": "suiker",
   "hint": "Je doet het in je thee om hem zoet te maken.",
-  "cover_url": "https://drive.usercontent.google.com/download?id=1FCZfGCtmasiIzfbUgjYWAicQniQOk8Q2&export=download"
+  "cover_url": "https://drive.usercontent.google.com/download?id=1FCZfGCtmasiIzfbUgjYWAicQniQOk8Q2&export=download",
+  "made_on": "2026-10-12",
+  "video_url": "https://github.com/mbrewrites-prog/gbyke/releases/download/quiz-2026-10-12-11/GBYKE_2026-10-12_klinkers_sukru.mp4"
  },
  {
   "id": 12,
