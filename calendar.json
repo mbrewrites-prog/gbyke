@@ -147,7 +147,7 @@
  },
  {
   "id": 12,
-  "status": "klaar",
+  "status": "gepost",
   "type": "tweewoorden",
   "answer": "aiwatra",
   "meaning": "tranen",
@@ -156,7 +156,9 @@
    "vocht"
   ],
   "hint": "Je laat ze als je verdrietig bent.",
-  "cover_url": "https://drive.usercontent.google.com/download?id=1yXDD0RF73nNe5mMB_YgMs6I8dVMn72gX&export=download"
+  "cover_url": "https://drive.usercontent.google.com/download?id=1yXDD0RF73nNe5mMB_YgMs6I8dVMn72gX&export=download",
+  "made_on": "2026-10-13",
+  "video_url": "https://github.com/mbrewrites-prog/gbyke/releases/download/quiz-2026-10-13-12/GBYKE_2026-10-13_tweewoorden_aiwatra.mp4"
  },
  {
   "id": 13,
