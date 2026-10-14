@@ -162,7 +162,7 @@
  },
  {
   "id": 13,
-  "status": "klaar",
+  "status": "gepost",
   "type": "piramide",
   "answer": "kondre",
   "meaning": "land",
@@ -181,7 +181,9 @@
    "onder"
   ],
   "hint": "Suriname is er één van.",
-  "cover_url": "https://drive.usercontent.google.com/download?id=1cE1CzrnMzBdxKgrhPFEqQVwyHvWjfSUT&export=download"
+  "cover_url": "https://drive.usercontent.google.com/download?id=1cE1CzrnMzBdxKgrhPFEqQVwyHvWjfSUT&export=download",
+  "made_on": "2026-10-14",
+  "video_url": "https://github.com/mbrewrites-prog/gbyke/releases/download/quiz-2026-10-14-13/GBYKE_2026-10-14_piramide_kondre.mp4"
  },
  {
   "id": 14,
