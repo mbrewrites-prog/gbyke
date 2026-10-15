@@ -187,13 +187,15 @@
  },
  {
   "id": 14,
-  "status": "klaar",
+  "status": "gepost",
   "type": "husselaar",
   "answer": "brede",
   "meaning": "brood",
   "extra": "o",
   "hint": "Je smeert er boter op.",
-  "cover_url": "https://drive.usercontent.google.com/download?id=1HMVcKf_sAs1ZQHDZHZiaMb7qDX75F_nw&export=download"
+  "cover_url": "https://drive.usercontent.google.com/download?id=1HMVcKf_sAs1ZQHDZHZiaMb7qDX75F_nw&export=download",
+  "made_on": "2026-10-15",
+  "video_url": "https://github.com/mbrewrites-prog/gbyke/releases/download/quiz-2026-10-15-14/GBYKE_2026-10-15_husselaar_brede.mp4"
  },
  {
   "id": 15,
