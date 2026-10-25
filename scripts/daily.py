@@ -3,7 +3,7 @@ Posting only happens after approval in the Claude chat."""
 import json, os, sys, subprocess, datetime, threading, http.server, socketserver, urllib.request, shutil
 from zoneinfo import ZoneInfo
 sys.path.insert(0, os.path.dirname(__file__))
-import rules
+import rules, planner, cover
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 TPL = os.path.join(ROOT, 'templates'); OUT = os.path.join(ROOT, 'out'); FPS = 30
 INTRO_ID = '1WdTv6GdlUW0dG6hDUWXcgJTP-WGDiP8C'                     # GBYKE_scene1_avatar_intro.mp4 (SPA Audio)
@@ -42,6 +42,11 @@ def render(page, frames_dir):
 
 def main():
     cal_path = os.path.join(ROOT, 'calendar.json'); cal = json.load(open(cal_path, encoding='utf-8'))
+    # fully automatic: when fewer than 3 quizzes are left, Claude plans the next 7 from the dictionary
+    if sum(1 for e in cal if e.get('status') == 'klaar') < 3:
+        try:
+            cal.extend(planner.plan(cal, n=7)); json.dump(cal, open(cal_path, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+        except Exception as err: print('PLANNER FOUT:', err)
     entry = None
     today = datetime.datetime.now(ZoneInfo('Europe/Amsterdam')).date()
     recent = {e['answer'].lower() for e in cal if e.get('made_on') and (today - datetime.date.fromisoformat(e['made_on'])).days < 7}
@@ -50,8 +55,6 @@ def main():
         if e['answer'].lower() in recent: print('SKIP (woord al gebruikt deze week):', e['answer']); continue
         try: page, cfg = rules.build(e); entry = e; break
         except ValueError as err: e['status'] = 'afgekeurd'; e['reason'] = str(err); print('REJECTED', e['id'], err)
-    if entry and not entry.get('cover_url'):
-        sys.exit(f"Quiz {entry['id']} ({entry['answer']}) heeft nog geen cover – vraag Claude de covers voor deze week te maken.")
     if not entry:
         json.dump(cal, open(cal_path, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
         sys.exit('Geen quiz met status "klaar" meer in calendar.json – vul de kalender aan.')
@@ -77,10 +80,11 @@ def main():
        '-c:v', 'libx264', '-preset', 'medium', '-crf', '19', '-pix_fmt', 'yuv420p', '-c:a', 'aac', '-b:a', '160k', '-movflags', '+faststart', final)
     if TEST_FRAMES: print('TEST OK', final); return
     tag = f"quiz-{today:%Y-%m-%d}-{entry['id']}"; repo = os.environ['GITHUB_REPOSITORY']
-    sh('gh', 'release', 'create', tag, final, '--title', f"{today} – {entry['type']} – {entry['answer']}", '--notes', 'GBYKE daily quiz')
+    cover_path = cover.make_cover(entry, OUT, os.path.join(TPL, 'logo.png'))      # automatic cover (OpenAI scene + card)
+    sh('gh', 'release', 'create', tag, final, cover_path, '--title', f"{today} – {entry['type']} – {entry['answer']}", '--notes', 'GBYKE daily quiz')
     url = f"https://github.com/{repo}/releases/download/{tag}/{name}"
     payload = {'brand_id': GBYKE_BRAND, 'video_url': url, 'file_name': name, 'caption': rules.caption(entry),
-               'cover_url': entry.get('cover_url', ''),
+               'cover_url': f"https://github.com/{repo}/releases/download/{tag}/{os.path.basename(cover_path)}",
                'title': rules.GAME_NAME[entry['type']] + ' van de dag', 'publish_at': f"{today:%Y-%m-%d}T18:00:00", 'answer': entry['answer']}
     req = urllib.request.Request(os.environ['MAKE_WEBHOOK_URL'], data=json.dumps(payload).encode(), headers={'Content-Type': 'application/json'})
     print('Make:', urllib.request.urlopen(req, timeout=300).read().decode())
