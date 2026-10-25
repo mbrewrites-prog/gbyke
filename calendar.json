@@ -199,13 +199,15 @@
  },
  {
   "id": 15,
-  "status": "klaar",
+  "status": "gepost",
   "type": "cryptisch",
   "answer": "sribi",
   "meaning": "slapen",
   "clue": "Wat je elke nacht met je ogen dicht in bed doet.",
   "extra_line": "Wat je elke nacht in bed doet",
-  "hint": "Daarna word je uitgerust wakker."
+  "hint": "Daarna word je uitgerust wakker.",
+  "made_on": "2026-10-25",
+  "video_url": "https://github.com/mbrewrites-prog/gbyke/releases/download/quiz-2026-10-25-15/GBYKE_2026-10-25_cryptisch_sribi.mp4"
  },
  {
   "id": 16,
