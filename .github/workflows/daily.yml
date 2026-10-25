@@ -18,7 +18,7 @@ jobs:
       - name: Install
         run: |
           npm install && ln -sfn ../node_modules templates/node_modules
-          pip install playwright==1.55.0 && python -m playwright install --with-deps chromium
+          pip install playwright==1.55.0 pillow && python -m playwright install --with-deps chromium
           sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
       - name: Render and publish
         env:
