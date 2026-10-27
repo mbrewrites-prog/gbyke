@@ -221,11 +221,13 @@
  },
  {
   "id": 17,
-  "status": "klaar",
+  "status": "gepost",
   "type": "klinkers",
   "answer": "anansi",
   "meaning": "spin",
-  "hint": "Hij spint een web en is de held van veel verhalen."
+  "hint": "Hij spint een web en is de held van veel verhalen.",
+  "made_on": "2026-10-27",
+  "video_url": "https://github.com/mbrewrites-prog/gbyke/releases/download/quiz-2026-10-27-17/GBYKE_2026-10-27_klinkers_anansi.mp4"
  },
  {
   "id": 18,
@@ -238,5 +240,124 @@
    "kind"
   ],
   "hint": "Opa en oma zijn er dol op."
+ },
+ {
+  "id": 19,
+  "status": "klaar",
+  "planned_by": "claude",
+  "planned_on": "2026-10-27",
+  "type": "piramide",
+  "answer": "mutyama",
+  "meaning": "regenboog",
+  "hint": "Zeven kleuren aan de hemel na een bui met zon.",
+  "scene": "a sunny city park path with trees and a bike lane",
+  "outfit": "oversized white tee, olive cargo pants, plain white sneakers",
+  "layers": 7,
+  "rows": [
+   "a",
+   "yu",
+   "tra",
+   "moro",
+   "nanga",
+   "kapten"
+  ],
+  "row_meanings": [
+   "de",
+   "jij",
+   "ander",
+   "overmeesteren",
+   "met",
+   "kapitein"
+  ]
+ },
+ {
+  "id": 20,
+  "status": "klaar",
+  "planned_by": "claude",
+  "planned_on": "2026-10-27",
+  "type": "husselaar",
+  "answer": "sereh",
+  "meaning": "citroengras",
+  "hint": "Geurige keukenplant met lange, smalle groene bladeren.",
+  "scene": "a bright farmers market stall with colorful crates",
+  "outfit": "denim jacket, grey hoodie, black cargo pants, plain sneakers",
+  "extra": "m"
+ },
+ {
+  "id": 21,
+  "status": "klaar",
+  "planned_by": "claude",
+  "planned_on": "2026-10-27",
+  "type": "cryptisch",
+  "answer": "batra",
+  "meaning": "fles",
+  "hint": "Glazen bewaarder van drank, met een smalle hals.",
+  "scene": "a sunny beach boardwalk with wooden railings",
+  "outfit": "khaki bomber jacket, white tee, relaxed jeans, plain sneakers",
+  "clue": "Glazen bewaarder met hals; een bericht erin drijft over zee.",
+  "extra_line": "Sranantongo, vijf letters"
+ },
+ {
+  "id": 22,
+  "status": "klaar",
+  "planned_by": "claude",
+  "planned_on": "2026-10-27",
+  "type": "code",
+  "answer": "siksi",
+  "meaning": "zes",
+  "hint": "Eén meer dan vijf.",
+  "scene": "a modern street corner with colorful murals",
+  "outfit": "navy hoodie, beige cargo pants, plain white sneakers"
+ },
+ {
+  "id": 23,
+  "status": "klaar",
+  "planned_by": "claude",
+  "planned_on": "2026-10-27",
+  "type": "klinkers",
+  "answer": "skorodei",
+  "meaning": "schooldag",
+  "hint": "Op deze dag zit je in de klas.",
+  "scene": "a leafy campus courtyard with benches and bikes",
+  "outfit": "oversized grey tee, light denim jacket, black jeans, plain sneakers"
+ },
+ {
+  "id": 24,
+  "status": "klaar",
+  "planned_by": "claude",
+  "planned_on": "2026-10-27",
+  "type": "tweewoorden",
+  "answer": "ososma",
+  "meaning": "huisgenoot",
+  "hint": "Iemand die onder hetzelfde dak woont als jij.",
+  "scene": "a cozy neighborhood street with small porches and plants",
+  "outfit": "green bomber jacket, white tee, wide denim, plain sneakers",
+  "words": [
+   "huis",
+   "mens"
+  ]
+ },
+ {
+  "id": 25,
+  "status": "klaar",
+  "planned_by": "claude",
+  "planned_on": "2026-10-27",
+  "type": "piramide",
+  "answer": "nono",
+  "meaning": "nee",
+  "hint": "Het tegenovergestelde van ja.",
+  "scene": "a quiet canal-side promenade with trees",
+  "outfit": "black hoodie, grey cargo pants, plain white sneakers",
+  "layers": 4,
+  "rows": [
+   "a",
+   "no",
+   "oso"
+  ],
+  "row_meanings": [
+   "de",
+   "nee",
+   "huis"
+  ]
  }
 ]
