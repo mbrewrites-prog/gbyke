@@ -231,7 +231,7 @@
  },
  {
   "id": 18,
-  "status": "klaar",
+  "status": "gepost",
   "type": "tweewoorden",
   "answer": "granpikin",
   "meaning": "kleinkind",
@@ -239,7 +239,9 @@
    "groot",
    "kind"
   ],
-  "hint": "Opa en oma zijn er dol op."
+  "hint": "Opa en oma zijn er dol op.",
+  "made_on": "2026-10-31",
+  "video_url": "https://github.com/mbrewrites-prog/gbyke/releases/download/quiz-2026-10-31-18/GBYKE_2026-10-31_tweewoorden_granpikin.mp4"
  },
  {
   "id": 19,
